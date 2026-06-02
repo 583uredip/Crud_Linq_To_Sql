@@ -8,3 +8,4 @@ E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.csproj.Ge
 E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.csproj.CoreCompileInputs.cache
 E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.exe
 E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.pdb
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.Form2.resources

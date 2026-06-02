@@ -72,6 +72,13 @@ namespace Crud_LInq_To_Sql
 				return this.GetTable<student>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spShowAtudent")]
+		public ISingleResult<spShowAtudentResult> spShowAtudent()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<spShowAtudentResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.student")]
@@ -228,6 +235,86 @@ namespace Crud_LInq_To_Sql
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class spShowAtudentResult
+	{
+		
+		private int _id;
+		
+		private string _name;
+		
+		private string _gender;
+		
+		private int _standard;
+		
+		public spShowAtudentResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gender", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string gender
+		{
+			get
+			{
+				return this._gender;
+			}
+			set
+			{
+				if ((this._gender != value))
+				{
+					this._gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_standard", DbType="Int NOT NULL")]
+		public int standard
+		{
+			get
+			{
+				return this._standard;
+			}
+			set
+			{
+				if ((this._standard != value))
+				{
+					this._standard = value;
+				}
 			}
 		}
 	}
