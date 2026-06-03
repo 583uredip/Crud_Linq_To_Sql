@@ -134,5 +134,45 @@ namespace Crud_LInq_To_Sql
                 MessageBox.Show("Please Select A Row", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void GENDERtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CLASStextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AGEtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GENDERlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

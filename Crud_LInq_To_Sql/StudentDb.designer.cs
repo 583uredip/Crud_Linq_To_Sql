@@ -73,11 +73,18 @@ namespace Crud_LInq_To_Sql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spShowAtudent")]
-		public ISingleResult<spShowAtudentResult> spShowAtudent()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spShowStudent")]
+		public ISingleResult<spShowStudentResult> spShowStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> standared)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<spShowAtudentResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), standared);
+			return ((ISingleResult<spShowStudentResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spInsertStudent")]
+		public int spInsertStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string gender, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> age, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> standared)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, gender, age, standared);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -239,33 +246,35 @@ namespace Crud_LInq_To_Sql
 		}
 	}
 	
-	public partial class spShowAtudentResult
+	public partial class spShowStudentResult
 	{
 		
-		private int _id;
+		private int _Id;
 		
 		private string _name;
 		
 		private string _gender;
 		
+		private int _age;
+		
 		private int _standard;
 		
-		public spShowAtudentResult()
+		public spShowStudentResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
-		public int id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+		public int Id
 		{
 			get
 			{
-				return this._id;
+				return this._Id;
 			}
 			set
 			{
-				if ((this._id != value))
+				if ((this._Id != value))
 				{
-					this._id = value;
+					this._Id = value;
 				}
 			}
 		}
@@ -298,6 +307,22 @@ namespace Crud_LInq_To_Sql
 				if ((this._gender != value))
 				{
 					this._gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_age", DbType="Int NOT NULL")]
+		public int age
+		{
+			get
+			{
+				return this._age;
+			}
+			set
+			{
+				if ((this._age != value))
+				{
+					this._age = value;
 				}
 			}
 		}

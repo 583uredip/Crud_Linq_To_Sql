@@ -9,12 +9,21 @@
       <Column Name="standard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Function Name="dbo.spShowAtudent" Method="spShowAtudent">
-    <ElementType Name="spShowAtudentResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+  <Function Name="dbo.spShowStudent" Method="spShowStudent">
+    <Parameter Name="standared" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spShowStudentResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="gender" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="standard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.spInsertStudent" Method="spInsertStudent">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="standared" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

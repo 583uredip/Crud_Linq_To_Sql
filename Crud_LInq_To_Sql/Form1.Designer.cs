@@ -55,6 +55,7 @@ namespace Crud_LInq_To_Sql
             this.label1.Size = new System.Drawing.Size(311, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "STUDENTS DETAIL";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,6 +66,7 @@ namespace Crud_LInq_To_Sql
             this.label2.Size = new System.Drawing.Size(81, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "NAME";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // NAMEtextBox
             // 
@@ -95,6 +97,7 @@ namespace Crud_LInq_To_Sql
             this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "CLASS";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -105,6 +108,7 @@ namespace Crud_LInq_To_Sql
             this.label4.Size = new System.Drawing.Size(60, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "AGE";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // GENDERlabel
             // 
@@ -115,6 +119,7 @@ namespace Crud_LInq_To_Sql
             this.GENDERlabel.Size = new System.Drawing.Size(111, 29);
             this.GENDERlabel.TabIndex = 6;
             this.GENDERlabel.Text = "GENDER";
+            this.GENDERlabel.Click += new System.EventHandler(this.GENDERlabel_Click);
             // 
             // AGEtextBox
             // 
@@ -123,6 +128,7 @@ namespace Crud_LInq_To_Sql
             this.AGEtextBox.Name = "AGEtextBox";
             this.AGEtextBox.Size = new System.Drawing.Size(233, 30);
             this.AGEtextBox.TabIndex = 2;
+            this.AGEtextBox.TextChanged += new System.EventHandler(this.AGEtextBox_TextChanged);
             // 
             // CLASStextBox3
             // 
@@ -131,6 +137,7 @@ namespace Crud_LInq_To_Sql
             this.CLASStextBox3.Name = "CLASStextBox3";
             this.CLASStextBox3.Size = new System.Drawing.Size(233, 30);
             this.CLASStextBox3.TabIndex = 3;
+            this.CLASStextBox3.TextChanged += new System.EventHandler(this.CLASStextBox3_TextChanged);
             // 
             // GENDERtextBox
             // 
@@ -139,6 +146,7 @@ namespace Crud_LInq_To_Sql
             this.GENDERtextBox.Name = "GENDERtextBox";
             this.GENDERtextBox.Size = new System.Drawing.Size(233, 30);
             this.GENDERtextBox.TabIndex = 1;
+            this.GENDERtextBox.TextChanged += new System.EventHandler(this.GENDERtextBox_TextChanged);
             // 
             // CLEARbutton
             // 
