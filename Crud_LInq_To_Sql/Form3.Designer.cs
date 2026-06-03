@@ -50,12 +50,14 @@ namespace Crud_LInq_To_Sql
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 392);
+            this.dataGridView1.Location = new System.Drawing.Point(121, 399);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(569, 290);
             this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // UPDATEbutton
             // 
@@ -66,6 +68,7 @@ namespace Crud_LInq_To_Sql
             this.UPDATEbutton.TabIndex = 22;
             this.UPDATEbutton.Text = "UPDATE";
             this.UPDATEbutton.UseVisualStyleBackColor = true;
+            this.UPDATEbutton.Click += new System.EventHandler(this.UPDATEbutton_Click);
             // 
             // DELETEbutton
             // 
@@ -76,6 +79,7 @@ namespace Crud_LInq_To_Sql
             this.DELETEbutton.TabIndex = 24;
             this.DELETEbutton.Text = "DELETE";
             this.DELETEbutton.UseVisualStyleBackColor = true;
+            this.DELETEbutton.Click += new System.EventHandler(this.DELETEbutton_Click);
             // 
             // CLEARbutton
             // 
@@ -86,6 +90,7 @@ namespace Crud_LInq_To_Sql
             this.CLEARbutton.TabIndex = 26;
             this.CLEARbutton.Text = "CLEAR";
             this.CLEARbutton.UseVisualStyleBackColor = true;
+            this.CLEARbutton.Click += new System.EventHandler(this.CLEARbutton_Click);
             // 
             // GENDERtextBox
             // 

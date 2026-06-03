@@ -13,6 +13,7 @@ namespace Crud_LInq_To_Sql
     public partial class Form3 : Form
     {
         StudentDbDataContext db;
+        int selectedId = 0;
         public Form3()
         {
             InitializeComponent();
@@ -55,6 +56,65 @@ namespace Crud_LInq_To_Sql
         private void Form3_Load(object sender, EventArgs e)
         {
             GridView();
+        }
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0) return;
+            selectedId = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            NAMEtextBox.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            GENDERtextBox.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            AGEtextBox.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            CLASStextBox3.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+        }
+        private void UPDATEbutton_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count>0)
+            {
+                db = new StudentDbDataContext();
+                db.spUpdateStudent(selectedId, NAMEtextBox.Text, GENDERtextBox.Text, int.Parse(AGEtextBox.Text), int.Parse(CLASStextBox3.Text));
+                MessageBox.Show("Data has been Update Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearTextBox();
+                GridView();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Row", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CLEARbutton_Click(object sender, EventArgs e)
+        {
+            ClearTextBox();
+        }
+
+        private void DELETEbutton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult com = MessageBox.Show("Are You Sure Delete This", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (com == DialogResult.Yes)
+                {
+
+                    db = new StudentDbDataContext();
+                    db.spDeleteStudent(selectedId);
+                    MessageBox.Show("Data has been Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearTextBox();
+                    GridView();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select A Row", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
