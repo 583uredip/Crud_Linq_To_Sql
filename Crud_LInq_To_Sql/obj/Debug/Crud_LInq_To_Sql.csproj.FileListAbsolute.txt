@@ -1,0 +1,12 @@
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\bin\Debug\Crud_LInq_To_Sql.exe.config
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\bin\Debug\Crud_LInq_To_Sql.exe
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\bin\Debug\Crud_LInq_To_Sql.pdb
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.csproj.AssemblyReference.cache
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.Form1.resources
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.Properties.Resources.resources
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.csproj.GenerateResource.cache
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.csproj.CoreCompileInputs.cache
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.exe
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.pdb
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.Form2.resources
+E:\c#code\Crud_LInq_To_Sql\Crud_LInq_To_Sql\obj\Debug\Crud_LInq_To_Sql.Form3.resources

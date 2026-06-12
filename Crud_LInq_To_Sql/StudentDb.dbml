@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StudentDB" Class="StudentDbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=StudentDB;Integrated Security=True" SettingsObjectName="Crud_LInq_To_Sql.Properties.Settings" SettingsPropertyName="StudentDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.student" Member="students">
+    <Type Name="student">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="standard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spShowStudent" Method="spShowStudent">
+    <Parameter Name="standared" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spShowStudentResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="standard" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spInsertStudent" Method="spInsertStudent">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="standared" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spUpdateStudent" Method="spUpdateStudent">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="standard" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDeleteStudent" Method="spDeleteStudent">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
